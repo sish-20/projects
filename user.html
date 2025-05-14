@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"> </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inconsolata:wght@200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inconsolata:wght@200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="user.js"></script>
+</head>
+<body class=" min-h-screen flex flex-col ">
+    <nav>
+        <ul class="flex flex-row text-slate-500  mx-40 mb-2 text-xl font-medium gap-5
+             ">
+            <li class="  p-2 border-r-2 border-l-2 border-b-2 border-transparent  transition delay-60 hover:border-slate-700  hover:text-purple-600 ">
+                <a href="./index.html"> Home </a>
+            </li>
+            <li class=" p-2 border-r-2 border-l-2 border-b-2 border-transparent  transition delay-60 hover:border-slate-700  hover:text-purple-600 ">
+                <a href="./about.html"> About </a>
+            </li>
+            <li class=" p-2 border-r-2 border-l-2 border-b-2 border-transparent  transition delay-60 hover:border-slate-700  hover:text-purple-600 ">
+                <a href="./profiles.html"> Profiles </a> 
+            </li>
+        </ul>
+    </nav>
+    <!-- <div class="hero p-5 z-10 min-h-60  mx-10 shadow ">
+        <div class="flex flex-row gap-10 justify-start items-center">
+            <img class=" w-52 rounded-md" src="images/rupeelogo.png" alt="">
+           
+            <h1 class="main-title text-4xl md:text-7xl my-5 font-bold  text-center">
+                MoneyMonitor
+            </h1>
+        </div>
+    </div> -->
+    
+    
+    <div class="mx-10 p-5 py-3 mt-2 text-lg">
+        <h1 class="profile-name text-3xl text-slate-700 font-bold text-center">
+        </h1>
+
+        <!-- <div class="profile-info ">
+        </div> -->
+
+        <div class="grid grid-cols-2 w-4/5 md:3/4 gap-5 mx-auto text-xl justify-center bg-sky-400 p-4 my-2 flex-wrap rounded-md 
+                *:bg-slate-100 *:p-4 *:rounded  ">
+            <p class="profile-salary hover:scale-105"></p>
+            <!-- <p class="profile-currency"></p> -->
+            <p class="profile-savings-goal hover:scale-105"></p>
+            <p class="profile-email hover:scale-105"></p>
+            <p class="profile-start-date hover:scale-105"></p>
+        </div>
+
+
+        <div class=" mx-auto justify-center text-2xl w-4/5 md:w-1/2 gap-4 p-5 my-4 bg-orange-300 flex-wrap rounded-lg bg--200 shadow-md">
+            <p class="profile-expenses p-3 mx-4   text-slate-600  rounded-md text-center ">
+                <!-- Profile Expenses -->
+            </p>
+            <p class="profile-net-income p-3 text-slate-700 text-3xl  mx-4 rounded-md text-center">
+                <!-- Profile Net Income -->
+            </p>
+        </div>
+
+        <h1 class="pt-4  ml-48 mt-4 text-4xl font-semibold text-sky-600">
+            Transactions
+        </h1>
+        <div class="transactions p-4 flex flex-col gap-2 w-3/4 mx-auto *:bg-sky-200 text-blue-900 *:rounded *:justify-center *:px-8 *:py-2 ">
+            <!-- Transactions -->
+            
+        </div>
+        
+    </div>
+
+    <div class="mx-10 p-5 py-3 mt-2 text-lg">
+        <h1 class="text-3xl text-slate-700 font-bold text-center">
+            Add New Transaction/Expense
+        </h1>
+    
+        <div class="form-error" style="color: red; text-align: center; display: none;"></div>
+        
+        <form action="" class="transaction-form flex flex-col gap-3 justify-center items-center w-4/5 md:w-1/2 mx-auto p-4 py-6 bg-slate-200 mt-4 rounded">
+            <!-- Date -->
+            <label for="transaction-date" class="w-2/3 text-left">Date:</label>
+            <input id="transaction-date" type="date" class="p-1 w-2/3" required>
+            
+            <!-- Description -->
+            <label for="description" class="w-2/3 text-left">Description:</label>
+            <input id="description" type="text" class="p-1 w-2/3" placeholder="e.g., Grocery shopping" required>
+            
+            <!-- Category -->
+            <label for="category" class="w-2/3 text-left">Category:</label>
+            <select id="category" class="p-1 w-2/3" required>
+                <option value="" disabled selected>Select a category</option>
+                <option value="Food">Food</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Miscellaneous">Miscellaneous</option>
+                <!-- Add more categories as needed -->
+            </select>
+    
+            <!-- Amount -->
+            <label for="amount" class="w-2/3 text-left">Amount:</label>
+            <input id="amount" type="number" class="p-1 w-2/3" placeholder="Enter amount" required>
+    
+    
+            <!-- Submit Button -->
+            <button type="submit" class="my-2 font-semibold bg-slate-700 p-2 text-slate-300
+                                            transition delay-60 ease-in-out hover:bg-slate-900 hover:text-white hover:scale-105 rounded">
+                Add Transaction
+            </button>
+        </form>
+    </div>
+    
+
+
+    <script src="transaction.js"></script>
+    <script src="delete.js"></script>
+
+<footer class="bg-gradient-to-r from-sky-500 to-indigo-600 text-white py-6 mt-auto">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-6">
+        
+
+        <!-- Quick Links -->
+        <div class="flex gap-6 mt-4 md:mt-0">
+            <a href="./index.html" class="text-sm hover:underline">Home</a>
+            <a href="./profiles.html" class="text-sm hover:underline">Profiles</a>
+            <a href="./about.html" class="text-sm hover:underline">About</a>
+        </div>
+
+        
+    </div>
+
+    <!-- Divider -->
+    <div class="mt-6 border-t border-white opacity-30"></div>
+
+    <!-- Copyright Section -->
+    <div class="text-center mt-4 text-sm text-gray-200">
+        © 2024 MoneyMonitor. All rights reserved.
+    </div>
+</footer>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+body{
+    /* background-color: #E0E0E0; */
+    font-family: "Poppins", serif;
+}
+.main-title{
+    color: #FFC107;
+}
+.hero{
+    background-color: #07223d;
+}
+.slide-in{
+    transform: translate(-100%);
+    transition: all 1.4s ease-in-out;
+    opacity: 0;
+}
+.slide-out{
+    transform: translate(0);
+    opacity: 1;
+}
+
+.dollargreen{
+    color: #4CAF50;
+}
+.link-blue{
+    color:#03A9F4;
+}
